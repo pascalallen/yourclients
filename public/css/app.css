@@ -1,0 +1,78 @@
+body {
+	font-family: 'Amatic SC', cursive;
+	color: #567;
+	height: 100%;
+   	background-image: url("/img/memphis-colorful.png");
+	/*font-family: 'Sacramento', cursive;*/
+	/*font-family: 'Cabin Sketch', cursive;*/
+}
+
+.underline-hover {
+  position: relative;
+  color: #567;
+  text-decoration: none;
+}
+
+.underline-hover:hover {
+  color: #567;
+  text-decoration: none;
+}
+
+.underline-hover:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #567;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.underline-hover:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.image-container {
+    position: relative;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.text-container {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.image-container:hover .image {
+  opacity: 0.3;
+}
+
+.image-container:hover .text-container {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
